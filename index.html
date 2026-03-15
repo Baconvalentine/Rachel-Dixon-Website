@@ -1,0 +1,544 @@
+<!doctype html>
+<html class="h-100" lang="en">
+
+  <head>
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <meta name="description" content="A growing collection of ready to use components for the CSS framework Bootstrap 5">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="96x96" href=".t/img/favicon.png">
+  <meta name="author" content="Holger Koenemann">
+  <meta name="generator" content="Eleventy v3.1.2">
+  <meta name="HandheldFriendly" content="true">
+  <title>Rachel Dixon, health coach</title>
+  <link rel="stylesheet" href="css/theme.min.css">
+
+   <style>
+
+/* inter-300 - latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local(''),
+       url('./fonts/inter-v12-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('./fonts/inter-v12-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local(''),
+       url('./fonts/inter-v12-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('./fonts/inter-v12-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local(''),
+       url('./fonts/inter-v12-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('./fonts/inter-v12-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+</style>
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<style>
+
+.faq .faq-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--heading-color);
+}
+
+.faq .faq-description {
+  font-size: 1rem;
+  color: var(--default-color);
+  margin-bottom: 2rem;
+}
+
+.faq .faq-arrow {
+  color: var(--accent-color);
+}
+
+.faq .faq-container .faq-item {
+  background-color: var(--surface-color);
+  position: relative;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.faq .faq-container .faq-item:last-child {
+  margin-bottom: 0;
+}
+
+.faq .faq-container .faq-item h3 {
+  font-size: 1.25rem;
+  line-height: 24px;
+  margin: 0 30px 0 0;
+  transition: 0.3s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.faq .faq-container .faq-item h3 .num {
+  color: var(--accent-color);
+  padding-right: 5px;
+}
+
+.faq .faq-container .faq-item h3:hover {
+  color: var(--accent-color);
+}
+
+.faq .faq-container .faq-item .faq-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: 0.3s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.faq .faq-container .faq-item .faq-content p {
+  margin-bottom: 0;
+  overflow: hidden;
+}
+
+.faq .faq-container .faq-item .faq-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 16px;
+  line-height: 0;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.faq .faq-container .faq-item .faq-toggle:hover {
+  color: var(--accent-color);
+}
+
+.faq .faq-container .faq-active h3 {
+  color: var(--accent-color);
+}
+
+.faq .faq-container .faq-active .faq-content {
+  grid-template-rows: 1fr;
+  visibility: visible;
+  opacity: 1;
+  padding-top: 10px;
+}
+
+.faq .faq-container .faq-active .faq-toggle {
+  transform: rotate(90deg);
+  color: var(--accent-color);
+}
+
+  </style>
+  </head>
+
+<body data-bs-spy="scroll" data-bs-target="#navScroll">
+	<nav id="navScroll" class="navbar navbar-expand-lg navbar-light fixed-top" tabindex="0">
+		<div class="container">
+    		<a class="navbar-brand pe-4 fs-4" href="/"><img src="img/edited-photo.png" height="60px" width="60px">
+			</a>
+    		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      			<span class="navbar-toggler-icon"></span>
+    		</button>
+    		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+      			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      			<li class="nav-item"><a class="nav-link" href="#introduction" aria-label="Brings you to the frontpage">Introduction</a></li>
+  				<li class="nav-item"><a class="nav-link" href="#aboutus">About Rachel</a></li>
+  				<li class="nav-item"><a class="nav-link" href="#howitworks">How it works</a></li>
+				<li class="nav-item"><a class="nav-link" href="#location">Location and availability</a></li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+<!--Main-->
+<main>
+<!--Header-->	
+	<div class="w-100 overflow-hidden bg-gray-100" id="top">
+		<div class="container position-relative" id="introduction">
+			<div class="col-12 col-lg-8 mt-0 h-100 position-absolute top-0 end-0 bg-cover" data-aos="fade-left" style="background-image: url(img/webp/interior11.webp);">
+			</div>
+    		<div class="row">	
+    			<div class="col-lg-7 py-vh-6 position-relative" data-aos="fade-right">
+  				<h1 class="display-1 fw-bold mt-5">Health and wellbeing support for women over 40</h1>
+  				<a href="mailto:rachelcoates73@hotmail.com" class="btn btn-dark btn-xl shadow me-3 rounded-0 my-5">Email Rachel to get started</a>
+			</div>
+		</div>
+	</div>
+<!--End header-->
+<!--Introduction-->
+<div class="container py-vh-4 w-100 overflow-hidden">
+	<div class="container">
+		<div class="row d-flex justify-content-end">
+			<div class="col-lg-8 fs-4" data-aos="fade-down">
+			  	<h3 class="py-5" data-aos="fade-right">Are you struggling with anxiety, sugar cravings, brain fog or poor sleep?</h3>
+				<p>If you’re peri- or post-menopause, your body may be changing in ways that feel confusing, frustrating, and exhausting.</p>
+				<p>You may also feel overwhelmed and less like the person you used to be.</p>
+			</div>
+		</div>
+	</div>
+	<div class="row d-flex justify-content-center align-items-center">
+    	<div class="col-lg-5">
+	  		<h3 class="py-5 border-top border-dark" data-aos="fade-right">Does this sound familiar?</h3>
+		</div>
+		<div class="col-md-7" data-aos="fade-left">
+  			<blockquote>
+    			<div class="fs-4 my-3 fw-light pt-4 border-bottom pb-3"><p>You might be experiencing:</p>
+					<ul>
+					<li>Hormonal imbalance including heavy or painful periods</li>
+					<li>Temperature fluctuations</li>
+					<li>Anxiety for no apparent reason</li>
+					<li>Broken sleep and feeling exhausted in the morning</li>
+					<li>Sugar cravings and energy slumps</li>
+					<li>Weight again especially around the middle</li>
+					<li>Brain fog and not being able to find the right words</li>
+					<li>Anger and irritability</li></ul><br>
+					<p><b>There is support, you don't need to power through.</b></p></div>
+  			</blockquote>
+		</div>
+	</div>
+</div>
+<!--End introduction-->		
+<!--About Rachel-->
+<div class="w-100 overflow-hidden" id="aboutus">
+	<div class="container">
+		<div class="row d-flex justify-content-between align-items-center">
+			<div class="col-md-6">
+				<div class="col-12 shadow ratio rounded bg-cover mt-5 bp-center" data-aos="fade-right" style="background-image: url(img/rachel-sunlight.png);--bs-aspect-ratio: 100%;">
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<div class="row">
+				<div class="col-12">
+					<h2 class="display-6 mb-5" data-aos="fade-down">A holistic, real-life approach to women's health</h2>
+    			</div>
+					<p>I’m Rachel, a naturopathic health coach specialising in supporting women aged 40+.</p>
+					<p>I take a relaxed, holistic approach that looks at the whole picture — stress, lifestyle, habits, and hormones — without rigid rules, strict diets, or overwhelm.</p>
+					<p>My role is to listen and support you so that we can co-create achievable goals together.</p>
+					<p>I want you to be able to gain the tools and confidence to take control of your health going forwards</p>
+					<p>I was a nurse for over 20 years and often felt there wasn’t the time or space within conventional healthcare to support all aspects of a person’s life.</p>
+					<p>At the age of 51, I chose to focus on a more natural, holistic approach to health and wellbeing. I trained with the College of Naturopathic Medicine, gaining a Level 5 Diploma in Health Coaching, and I’m a member of the Association of Naturopathic Practitioners (ANP).</p>
+					<p>I’m also on my own health journey — learning how to nourish my body, manage stress, and maintain energy at this stage of life. I truly understand these challenges, both professionally and personally.</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!--End About Rachel-->
+<!--Who I work with-->
+<div class="container py-vh-4 w-100 overflow-hidden">
+	<div class="row d-flex justify-content-center align-items-center">
+    	<div class="col-lg-5">
+	  		<h3 class="py-5 border-top border-dark" data-aos="fade-right">Who I work with</h3>
+		</div>
+		<div class="col-md-7" data-aos="fade-left">
+  			<blockquote>
+    			<div class="fs-4 my-3 fw-light pt-4 border-bottom pb-3"><p>This programme is for women aged 40 and above who want to:</p>
+    			<ul>
+					<li>Improve their health, energy, and wellbeing
+					<li>Feel more in control of their changing bodies
+					<li>Understand what’s happening hormonally
+					<li>Create sustainable habits without pressure
+					<li>You don’t need to know exactly what’s wrong.</li></ul>
+					<br>
+					<p>If you simply don’t feel like yourself anymore, that’s enough to begin.</p>
+				</div>
+			</blockquote>
+		</div>
+	</div>
+	<div class="row d-flex justify-content-center align-items-center">
+    	<div class="col-lg-5">
+	  		<h3 class="py-5 border-top border-dark" data-aos="fade-right">There is another way to support your health</h3>
+		</div>
+		<div class="col-md-7" data-aos="fade-left">
+  			<blockquote>
+  				<div class="fs-4 my-3 fw-light pt-4 border-bottom pb-3">
+    			<p data-aos="fade-left" data-aos-delay="200">Many symptoms during peri- and post-menopause are linked to stress, hormone changes, gut health and much more.</p>
+				<p data-aos="fade-left" data-aos-delay="200">This isn’t about willpower or “trying harder”.</p>
+				<p data-aos="fade-left" data-aos-delay="200">With the right understanding and support, you can work with your body — not against it — using small, achievable changes that fit into real life.</p>
+				<p data-aos="fade-left" data-aos-delay="200">This approach helps you:</p>
+					<ul>
+					<li data-aos="fade-left" data-aos-delay="200">Understand why your symptoms are happening
+					<li data-aos="fade-left" data-aos-delay="200">Reduce sugar cravings and energy slumps
+					<li data-aos="fade-left" data-aos-delay="200">Feel calmer and more balanced
+					<li data-aos="fade-left" data-aos-delay="200">Build habits you can rely on long-term</li>
+					</ul>
+				</div>
+			</blockquote>
+		</div>
+	</div>
+</div>
+<!--End Who I work with-->
+<!--How it works-->
+<div class="py-vh-4 bg-gray-100 w-100 overflow-hidden" id="howitworks">
+	<div class="container"> 
+		<div class="row d-flex justify-content-between align-items-center">
+			<div class="col-lg-6">
+				<div class="row gx-5 d-flex">
+					<div class="col-md-11">
+						<div class="shadow ratio ratio-16x9 rounded bg-cover bp-center align-self-end" data-aos="fade-right" style="background-image: url(img/health-7.png);--bs-aspect-ratio: 50%;">
+						</div>
+    				</div>
+    				<div class="col-md-5 offset-md-1">
+      					<div class="shadow ratio ratio-1x1 rounded bg-cover mt-5 bp-center float-end" data-aos="fade-up" style="background-image: url(img/webp/interior42.webp);">
+      					</div>
+    				</div>
+    				<div class="col-md-6">
+      					<div class="col-12 shadow ratio rounded bg-cover mt-5 bp-center" data-aos="fade-left" style="background-image: url(img/health-8.png);--bs-aspect-ratio: 150%;">
+      					</div>
+    				</div>
+  				</div>
+		</div>
+		<div class="col-lg-5">
+  			<h3 class="py-5 border-top border-dark" data-aos="fade-left">How the programme works</h3>
+  			<p data-aos="fade-left" data-aos="fade-left"><b>Free 10-minute discovery call</b></p>
+			<p data-aos="fade-left" data-aos-delay="200"><b>Initial session – 60 minutes</b></p>
+			<p data-aos="fade-left" data-aos="fade-left">All sessions take place in the comfort of your own home and are designed to fit around a busy lifestyle.</p>
+			<p data-aos="fade-left" data-aos-delay="200">We explore your health history, current symptoms, and what’s troubling you most. Together, we start to understand why you feel the way you do.</p>
+			<p data-aos="fade-left" data-aos-delay="200"><b>Ongoing support – 5 x 30-minute sessions</b></p>
+				<ul>
+				<li data-aos="fade-left" data-aos-delay="200">Five fortnightly sessions over 10 weeks, giving you time to make changes, reflect, and build momentum.</li>
+				<li data-aos="fade-left" data-aos-delay="200">We focus on achievable goals, review what’s working, and gently adjust what isn’t — without overwhelm.</li>
+				<li data-aos="fade-left" data-aos-delay="200">This is about steady progress, not perfection.  </li>
+				</ul>
+				<h3 data-aos="fade-left">Cost</h3>
+				<ul>
+				<li data-aos="fade-left" data-aos-delay="200">Fee 10-minute discovery session
+				<li data-aos="fade-left" data-aos-delay="200">£70 for initial session, payable after discovery call to secure first appointment
+				<li data-aos="fade-left" data-aos-delay="200">5 x 30-minute sessions: £35 each 
+				<li data-aos="fade-left" data-aos-delay="200">£245 total for 3-month programme
+				</ul></p>
+		</div>
+	</div>
+</div>
+<!--End how it works-->
+ <!-- Faq Section -->
+<section class="faq-9 faq section light-background" id="faq">
+<div class="container py-vh-4 w-100 overflow-hidden">
+	<div class="row d-flex justify-content-center align-items-center">
+    	<div class="col-lg-5">
+	  		<h3 class="py-5 border-top border-dark" data-aos="fade-right">Got a question?</h3>
+		</div>
+		<div class="col-lg-7" data-aos="fade-up" data-aos-delay="300">
+            <div class="faq-container">
+
+              <div class="faq-item">
+                <h3>Is this right for peri- or post-menopause?</h3>
+                <div class="faq-content">
+                  <p>Both. I work with women 40+ who are peri- or post-menopause and experiencing changes in energy, mood, weight, sleep, hormones, gut health and much more.</p></div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>I’m very busy — will this take a lot of time?</h3>
+                <div class="faq-content">
+                  <p>No. Sessions are short, spaced out, and designed to fit around real life. There’s no overwhelm or pressure to do everything at once.</p>
+                  </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>Will you give me meal plans or supplements?</h3>
+                <div class="faq-content">
+                  <p>No. I don’t prescribe meal plans or supplements. Instead, I help you understand how food, stress, and habits affect your energy and hormones so you can make informed choices.</p>
+                  </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>I don’t really know what’s wrong — is that okay?</h3>
+                <div class="faq-content">
+                  <p>Absolutely. “I just don’t feel like myself” is a very common starting point. We’ll gently figure things out together.</p>
+                  </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>Is this a replacement for medical care?</h3>
+                <div class="faq-content">
+                  <p>No. Health coaching complements, but does not replace, medical care. I will encourage you to speak to your doctor or natural therapist where appropriate.</p>
+                  </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+            </div>
+          </div>
+
+	</div>
+</div>
+</section>
+<!-- /Faq Section -->
+<div class="py-vh-6 bg-gray-900 text-light w-100 overflow-hidden" id="workwithus">
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      	<div class="row d-flex justify-content-center text-center">
+  			<div class="col-lg-8 text-center" data-aos="fade">
+        		<p class="text-secondary lead">You don’t have to do this alone</p>
+    			<h2 class="display-6 mb-5">If you’re ready to take a kinder, more effective approach to your health, one that fits your life and gives you tools for the future, I’d love to hear from you.</h2>
+  			</div>
+  			<div class="col-12">
+    			<a href="mailto:rachelcoates73@hotmail.com" class="btn btn-warning btn-xl shadow me-3 mt-4" data-aos="fade-down">Email Rachel to get started</a>
+  			</div>
+		</div>
+    </div>
+  </div>
+</div>
+<!--Location-->
+<div class="bg-light w-100 overflow-hidden" id="location">
+	<div class="container py-vh-6">
+    	<div class="row d-flex justify-content-center">
+      		<div class="col-12 col-lg-10 col-xl-8 text-center">
+  				<h2 class="display-6">Location and availability</h2>
+  					<p class="lead">I work with women in Redhill, Reigate, Dorking, and surrounding villages</p>
+					<p class="lead">Availability:</p>
+					<p class="lead">Monday to Friday</p>
+					<p class="lead">8am – 7pm</p>
+					<p class="lead">Limited weekly slots</p>
+					<p class="lead">Sessions are held in your own home.</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!--End location-->
+<div class="small py-vh-3 w-100 overflow-hidden">
+  <div class="container">
+    <div class="row">
+      	<div class="col-md-6 col-lg-4 border-end" data-aos="fade-up">
+  			<div class="d-flex">
+    			<div class="col-md-3 flex-fill pt-3 pe-3 pe-md-0">
+      				<img src="img/leaf-long-trans.png" alt="nice gallery image" width="30" height="55">
+    			</div>
+    			<div class="col-md-9 flex-fill">
+      				<h3 class="h5 my-2">Advice just for you</h3>
+      				<p>Recommendations tailored to your life</p>
+    			</div>
+  			</div>
+		</div>
+		<div class="col-md-6 col-lg-4 border-end" data-aos="fade-up" data-aos-delay="200">
+  			<div class="d-flex">
+    			<div class="col-md-3 flex-fill pt-3 pt-3 pe-3 pe-md-0">
+      				<img src="img/leaf-long-trans.png" alt="nice gallery image" width="30" height="55">
+    			</div>
+    			<div class="col-md-9 flex-fill">
+      				<h3 class="h5 my-2">Independent views</h3>
+      				<p>Perspectives beyond standard GP advice</p>
+    			</div>
+  			</div>
+		</div>
+		<div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+  			<div class="d-flex">
+    			<div class="col-md-3 flex-fill pt-3 pt-3 pe-3 pe-md-0">
+      				<img src="img/leaf-long-trans.png" alt="nice gallery image" width="30" height="55">
+    			</div>
+    			<div class="col-md-9 flex-fill">
+      				<h3 class="h5 my-2">Skills for life</h3>
+      				<p>Tools to make your own changes when you need it</p>
+    			</div>
+  			</div>
+  		</div>
+    </div>
+  </div>
+</div>
+<!--Email footer-->
+<div class="py-vh-6 text-light w-100 overflow-hidden" id="workwithus">
+	<div class="container">
+    	<div class="row d-flex justify-content-center">
+      		<div class="row d-flex justify-content-center text-center">
+  				<div class="col-12">
+    				<a href="mailto:rachelcoates73@hotmail.com" class="btn btn-warning btn-xl shadow me-3 mt-4" data-aos="fade-down">Email Rachel to get started</a>
+  				</div>
+			</div>
+    	</div>
+  </div>
+</div>
+<!--End email footer-->
+<!--Gallery-->
+<div class="position-relative overflow-hidden w-100 bg-light" id="gallery">
+  <div class="container-fluid">
+  		<div class="row overflow-scroll">
+    		<div class="col-12">
+      			<div class="row vw-100 px-0 py-vh-5 d-flex align-items-center scrollx">
+        			<div class="col-md-2" data-aos="fade-up">
+            			<img src="img/health-9.png" class="rounded shadow img-fluid" alt="nice gallery image" width="512" height="341">
+        			</div>
+        			<div class="col-md-2" data-aos="fade-up" data-aos-delay="200">
+            			<img src="img/health-2.png" class="img-fluid rounded shadow" alt="nice gallery image" width="1164" height="776">
+        			</div>
+        			<div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
+            			<img src="img/health-3.png" class="img-fluid rounded shadow" alt="nice gallery image" width="844" height="1054">
+        			</div>
+        			<div class="col-md-3" data-aos="fade-up" data-aos-delay="600">
+            			<img src="img/health-4.png" class="img-fluid rounded shadow" alt="nice gallery image" width="844" height="562">
+        			</div>
+        			<div class="col-md-2" data-aos="fade-up" data-aos-delay="800">
+            			<img src="img/health-6.png" class="rounded shadow img-fluid" alt="nice gallery image" width="512" height="341">
+            		</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--End gallery-->
+</main>
+<!--End main-->
+
+<footer>
+	<div class="container text-center py-3 small">Made by <a href="https://templatedeck.com" class="link-fancy" target="_blank">templatedeck.com</a>
+	</div>
+</footer>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/aos.js"></script>
+ <script>
+ AOS.init({
+   duration: 800, // values from 0 to 3000, with step 50ms
+ });
+ </script>
+
+ <script>
+  let scrollpos = window.scrollY
+  const header = document.querySelector(".navbar")
+  const header_height = header.offsetHeight
+
+  const add_class_on_scroll = () => header.classList.add("scrolled", "shadow-sm")
+  const remove_class_on_scroll = () => header.classList.remove("scrolled", "shadow-sm")
+
+  window.addEventListener('scroll', function() {
+    scrollpos = window.scrollY;
+
+    if (scrollpos >= header_height) { add_class_on_scroll() }
+    else { remove_class_on_scroll() }
+
+    console.log(scrollpos)
+  })
+</script>
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <!-- Frequently Asked Questions Toggle -->
+  <script>
+  document.querySelectorAll('.faq-item h3, .faq-item .faq-toggle').forEach((faqItem) => {
+    faqItem.addEventListener('click', () => {
+      faqItem.parentNode.classList.toggle('faq-active');
+    });
+  });
+  </script>
+	</body>
+</html>
